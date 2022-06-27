@@ -1,0 +1,353 @@
+/* importing the different types of fonts of poppins from gfonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+/* root variables */
+:root {
+  --color-primary: #7380ec;
+  --color-half-logo: #ff7782;
+  --color-success: #41f1b6;
+  --color-warning: #ffbb55;
+  --color-white: #fff;
+  --color-info-dark: #7d8da1;
+  --color-info-light: #dce1eb;
+  --color-light: rgba(132, 139, 200, 0.18);
+  --color-dark: #363949;
+  --color-primary-variant: #111e88;
+  --color-dark-variant: #677483;
+  --color-background: #f6f6f9;
+
+  --card-border-radius: #2rem;
+  --border-radius-1: 0.4rem;
+  --border-radius-2: 0.8rem;
+  --border-radius-3: 1.2rem;
+
+  ---card-padding: 1.8rem;
+  --padding-1: 1.2rem;
+
+  --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+/* universal selector */
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  appearance: none;
+  border: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: poppins, sans-serif;
+  font-size: 0.88rem;
+  background: var(--color-background);
+  user-select: none;
+  overflow-x: hiden;
+  color: var(--color-dark);
+}
+
+.container {
+  display: grid;
+  width: 96%;
+  margin: 0 auto;
+  gap: 1.8rem;
+  grid-template-columns: 14rem auto 23rem;
+}
+
+a {
+  color: var(--color-dark);
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+h1 {
+  font-weight: 800;
+  font-size: 1.8rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+}
+
+h3 {
+  font-size: 0.87rem;
+}
+
+h4 {
+  font-size: 0.8rem;
+}
+
+h5 {
+  font-size: 0.77rem;
+}
+
+small {
+  font-size: 0.75rem;
+}
+
+.profile-photo {
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.text-muted {
+  color: var(--color-info-dark);
+}
+
+p {
+  color: var(--color-dark-variant);
+}
+
+b {
+  color: var(--color-dark);
+}
+
+.primary {
+  color: var(--color-primary);
+}
+
+.half-logo {
+  color: var(--color-half-logo);
+}
+
+.success {
+  color: var(--color-success);
+}
+
+.warning {
+  color: var(--color-warning);
+}
+
+aside {
+  height: 100vh;
+}
+
+aside .top {
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* a property of flex, align the items with equl space between */
+  margin-top: 1.4rem;
+}
+
+aside .logo {
+  display: flex;
+  gap: 0.8rem;
+}
+
+aside .logo img {
+  width: 2rem;
+  height: 2rem;
+}
+
+aside .close {
+  display: none;
+}
+
+/* sidebar */
+aside .sidebar {
+  display: flex;
+  flex-direction: column;
+  /* to list the items hoeizontally */
+  height: 86vh;
+  position: relative;
+  top: 3rem;
+}
+
+aside h3 {
+  font-weight: 500;
+}
+
+aside .sidebar a {
+  display: flex;
+  color: var(--color-info-dark);
+  margin-left: 2rem;
+  gap: 1rem;
+  align-items: center;
+  position: relative;
+  height: 3.7rem;
+  transition: all 300ms ease;
+}
+
+aside .sidebar a span {
+  font-size: 1.6rem;
+  transition: all 300ms ease;
+}
+
+aside .sidebar a:last-child {
+  position: absolute;
+  bottom: 2rem;
+  width: 100%;
+}
+
+aside .sidebar a.active {
+  background: var(--color-light);
+  color: var(--color-primary);
+  margin-left: 0;
+}
+
+aside .sidebar a.active::before {
+  content: "";
+  width: 6px;
+  height: 100%;
+  background: var(--color-primary);
+}
+
+aside .sidebar a.active span {
+  /* color: var(--color-primary); */
+  margin-left: calc(1rem - 4px);
+  /* to move the active menu to the right with respect to the left margin of other nav options */
+}
+
+/* hover animation */
+aside .sidebar a:hover {
+  color: var(--color-primary);
+}
+
+aside .sidebar a:hover span {
+  margin-left: 1rem;
+}
+
+aside .sidebar .message-count {
+  background: var(--color-half-logo);
+  color: white;
+  padding: 2px 10px;
+  font-size: 11px;
+  border-radius: var(--border-radius-1);
+}
+
+/* MAIN Section */
+main {
+  margin-top: 1.4rem;
+}
+
+main .date {
+  /* inline-block allows to set a height & width on the element */
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1.6rem;
+  background: var(--color-light);
+  border-radius: var(--border-radius-1);
+}
+
+main .date input[type="date"] {
+  background: transparent;
+  color: var(--color-dark);
+}
+
+main .insights {
+  display: grid;
+  /* to arrange the 3 itmes in the single grid block with 1 fraction unit, i.e. for 1 part of the available space */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+}
+
+main .insights > div {
+  background: var(--color-white);
+  padding: var(---card-padding);
+  border-radius: var(--card-border-radius);
+  margin-top: 1rem;
+  /* for the transition to be smooth, which is defined in the block below (:hover) */
+  transition: all 300ms ease;
+  /* creating the shadow */
+  border-radius: 41px;
+  background: #e0e0e0;
+  box-shadow: 7px 7px 27px #9b9b9b, -7px -7px 27px #ffffff;
+}
+
+main .insights > div:hover {
+  box-shadow: none;
+}
+
+main .insights > div span {
+  background: var(--color-primary);
+  padding: 0.5rem;
+  border-radius: 50%;
+  font-size: 2rem;
+  color: var(--color-white);
+}
+
+main .insights .expenses span {
+  background: var(--color-half-logo);
+}
+
+main .insights .income span {
+  background: var(--color-success);
+}
+
+/* contains everything in the card */
+main .insights .middle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main .insights h3 {
+  margin: 1rem 0 0.6rem;
+  font-size: 1rem;
+}
+
+main .insights .progress {
+  position: relative;
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+}
+
+main .insights svg {
+  width: 7rem;
+  height: 7rem;
+}
+
+main .insights svg circle {
+  /* to empty circle */
+  fill: none;
+  stroke: var(--color-primary);
+  stroke-width: 14;
+  stroke-linecap: round;
+  transform: translate(5px, 5px);
+}
+
+main .insights .sales svg circle {
+  stroke-dashoffset: -30;
+  stroke-dasharray: 200;
+}
+
+main .insights .expenses svg circle {
+  stroke-dasharray: 80;
+  stroke-dashoffset: 20;
+}
+
+main .insights .income svg circle {
+  stroke-dasharray: 110;
+  stroke-dashoffset: 35;
+}
+/* positioning the percentage inside the circle */
+main .insights .progress .number {
+  position: absolute; /*as the progress is positioned relative above*/
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .insights small {
+  margin-top: 1.3rem;
+  display: block;
+}

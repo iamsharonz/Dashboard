@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- material icon cdn -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+    <!-- bootstrap cdn -->
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    /> -->
+    <link rel="stylesheet" href="styles.css" />
+    <title>PlayGround Management System</title>
+  </head>
+  <body>
+    <div class="container">
+      <aside>
+        <div class="top">
+          <!-- left top section -->
+          <div class="logo">
+            <img src="images/profile.jpg" alt="logo image" />
+            <h2>Sport<span class="half-logo">Zone</span></h2>
+          </div>
+
+          <!-- for the close symbol, closes the left window -->
+          <div class="close" id="close-btn">
+            <span class="material-icons-outlined"> close </span>
+          </div>
+        </div>
+
+        <!-- sidebar various options -->
+
+        <div class="sidebar">
+          <a href="">
+            <span class="material-icons-outlined"> dashboard </span>
+            <h3>Dashboard</h3>
+          </a>
+          <a href="">
+            <span class="material-icons-outlined"> person </span>
+            <h3>Customers</h3>
+          </a>
+          <a href="">
+            <span class="material-icons-outlined"> trending_up </span>
+            <h3>Analytics</h3>
+          </a>
+          <a href="" class="active">
+            <!-- animated icon -->
+            <!-- <img src="images/icons8-topic.gif" alt="" /> -->
+            <span class="material-icons-outlined"> chat </span>
+            <h3>Messages</h3>
+            <span class="message-count">10</span>
+          </a>
+
+          <a href="">
+            <span class="material-icons-outlined"> contact_support </span>
+            <h3>Support</h3>
+          </a>
+          <a href="">
+            <span class="material-icons-outlined"> settings </span>
+            <h3>Settings</h3>
+          </a>
+          <a href="">
+            <span class="material-icons-outlined"> add </span>
+            <h3>Add Product</h3>
+          </a>
+          <a href="">
+            <span class="material-icons-outlined"> logout </span>
+            <h3>Logout</h3>
+          </a>
+        </div>
+      </aside>
+
+      <!-- center section with the cards -->
+      <main>
+        <h1>Dasboard</h1>
+        <div class="date">
+          <input type="date" />
+        </div>
+
+        <div class="insights">
+          <!-- SALES -->
+          <div class="sales">
+            <span class="material-icons-outlined"> analytics </span>
+            <div class="middle">
+              <!-- to align in the left section of the first card -->
+              <div class="left">
+                <h3>Total Sales</h3>
+                <h1>50,000</h1>
+              </div>
+              <!-- for the progress circle -->
+              <div class="progress">
+                <svg>
+                  <circle cx="38" cy="38" r="36"></circle>
+                </svg>
+                <div class="number">
+                  <p>80%</p>
+                </div>
+              </div>
+            </div>
+            <small class="text-muted">Last 24 Hours</small>
+          </div>
+          <!-- END OF SALES -->
+
+          <!-- EXPENSES -->
+          <div class="expenses">
+            <span class="material-icons-outlined"> bar_chart </span>
+            <div class="middle">
+              <!-- to align in the left section of the first card -->
+              <div class="left">
+                <h3>Total Expenses</h3>
+                <h1>10,000</h1>
+              </div>
+              <!-- for the progress circle -->
+              <div class="progress">
+                <svg>
+                  <circle cx="38" cy="38" r="36"></circle>
+                </svg>
+                <div class="number">
+                  <p>30%</p>
+                </div>
+              </div>
+            </div>
+            <small class="text-muted">Last 24 Hours</small>
+          </div>
+          <!-- END OF EXPENSES -->
+
+          <!-- INCOME -->
+          <div class="income">
+            <span class="material-icons-outlined"> stacked_line_chart </span>
+            <div class="middle">
+              <!-- to align in the left section of the first card -->
+              <div class="left">
+                <h3>Total Income</h3>
+                <h1>1,00,000</h1>
+              </div>
+              <!-- for the progress circle -->
+              <div class="progress">
+                <svg>
+                  <circle cx="38" cy="38" r="36"></circle>
+                </svg>
+                <div class="number">
+                  <p>70%</p>
+                </div>
+              </div>
+            </div>
+            <small class="text-muted">Last 24 Hours</small>
+          </div>
+          <!-- END OF INCOME -->
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
